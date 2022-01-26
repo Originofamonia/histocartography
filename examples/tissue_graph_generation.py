@@ -3,7 +3,8 @@ Example: Extract a Tissue Graph from an H&E image.
 
 As used in:
 - "Hierarchical Graph Representations in Digital Pathology", Pati et al, 2021.
-- "HACT-Net: A Hierarchical Cell-to-Tissue Graph Neural Network for Histopathological Image Classification", Pati et al, MCCAI-W, 2020.
+- "HACT-Net: A Hierarchical Cell-to-Tissue Graph Neural Network for
+Histopathological Image Classification", Pati et al, MCCAI-W, 2020.
 """
 
 import os
@@ -82,8 +83,7 @@ def generate_tissue_graph(image_path):
         canvas.save(os.path.join('output', 'tissue_graphs_viz', image_name))
 
 
-if __name__ == "__main__":
-
+def main():
     # 1. download dummy images
     download_example_data('output')
 
@@ -93,3 +93,7 @@ if __name__ == "__main__":
 
     # 3. generate tissue graphs
     generate_tissue_graph(image_path=os.path.join('output', 'images'))
+
+
+if __name__ == "__main__":
+    main()
