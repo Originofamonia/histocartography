@@ -77,8 +77,7 @@ def generate_cell_graph(image_path):
         canvas.save(os.path.join('output', 'cell_graphs_viz', image_name))
 
 
-if __name__ == "__main__":
-
+def main():
     # 1. download dummy images
     download_example_data('output')
 
@@ -88,3 +87,7 @@ if __name__ == "__main__":
 
     # 3. generate tissue graphs
     generate_cell_graph(image_path=os.path.join('output', 'images'))
+
+
+if __name__ == "__main__":
+    main()
